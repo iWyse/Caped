@@ -190,10 +190,6 @@ h6 {
   min-width: 0;
 }
 
-*:focus {
-  outline: none;
-}
-
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -228,6 +224,10 @@ h6 {
      object-fit: contain;
 }
 
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 a:focus-visible,
 .button:focus-visible {
   -webkit-transition: 0s;
@@ -235,6 +235,13 @@ a:focus-visible,
   transition: 0s;
   outline: 3px solid #036fc6;
   outline-offset: 2px;
+}
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .header {
