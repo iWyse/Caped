@@ -228,6 +228,15 @@ h6 {
   display: none;
 }
 
+a:focus-visible,
+.button:focus-visible {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  outline: 3px solid #036fc6;
+  outline-offset: 2px;
+}
+
 a,
 span {
   -webkit-touch-callout: none;
@@ -649,7 +658,7 @@ span {
 
 .gallery {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   padding-left: 235px;
   top: 70px;
   height: 100%;
@@ -1395,6 +1404,14 @@ span {
             transform: scale(1.09);
   }
 
+  .gallery__item img:active,
+  .gallery__item img:focus,
+  .gallery__item img:focus-visible {
+    -webkit-transform: scale(1.09);
+        -ms-transform: scale(1.09);
+            transform: scale(1.09);
+  }
+
   .go-like {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -1407,10 +1424,7 @@ span {
             transform: scale(1.2);
   }
 
-  .go-like:active,
-  .go-like:focus,
-  .go-like:focus-visible,
-  .go-like:focus-within {
+  .go-like:active {
     -webkit-transform: translate(0px, -5px);
         -ms-transform: translate(0px, -5px);
             transform: translate(0px, -5px);
