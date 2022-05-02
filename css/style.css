@@ -228,16 +228,8 @@ h6 {
   display: none;
 }
 
-*:active,
-*:hover,
-*:focus,
-*:focus-visible {
-  outline: 0;
-  outline-offset: 0;
-  border: none;
-}
-
-a {
+a,
+span {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
