@@ -1407,7 +1407,10 @@ span {
             transform: scale(1.2);
   }
 
-  .go-like:active {
+  .go-like:active,
+  .go-like:focus,
+  .go-like:focus-visible,
+  .go-like:focus-within {
     -webkit-transform: translate(0px, -5px);
         -ms-transform: translate(0px, -5px);
             transform: translate(0px, -5px);
