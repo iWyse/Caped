@@ -437,6 +437,10 @@ input {
   border: none;
 }
 
+.search-box__input:focus-visible {
+  outline: 2px solid #F4DE4D;
+}
+
 .menu-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -906,10 +910,6 @@ input {
 }
 
 @media (min-width: 85.625em) {
-  .search-box__input:focus-visible {
-    outline: 2px solid #F4DE4D;
-  }
-
   .page {
     min-height: 100vh;
   }
