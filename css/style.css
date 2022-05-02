@@ -246,7 +246,8 @@ a:focus-visible,
 }
 
 a,
-span {
+span,
+input {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1116,6 +1117,12 @@ span {
 }
 
 @media (max-width: 47.99875em) {
+  .header__actions {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
   .menu-body .menu-list {
     overflow-y: scroll;
   }
