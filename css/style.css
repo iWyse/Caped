@@ -438,6 +438,7 @@ input {
 }
 
 .search-box__input:focus-visible {
+  border-radius: 12px;
   outline: 2px solid #F4DE4D;
 }
 
