@@ -601,7 +601,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 27px;
+  padding-left: 32px;
 }
 
 @supports (margin-top: clamp( 0.0000000625rem , -5.9130433984rem  +  29.5652173043vw , 21.25rem )) {
@@ -1001,6 +1001,7 @@ h6 {
 
   .sidebar__item--help {
     margin-top: 0;
+    padding-left: 27px;
   }
 
   .sidebar__item--help::before {
