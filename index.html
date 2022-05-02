@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<title>Главная</title>
+	<title>Caped shop</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220502171403">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220502210121">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -31,7 +31,7 @@
 								<button type="button" class="menu-mobile-close"><i class="ion _icon-close"></i></button>
 							</div>
 							<ul class="menu-list">
-								<li class="menu-item"><a class="menu-link" href="#" data-goto=".header">Products</a></li>
+								<li class="menu-item"><a class="menu-link" href="#">Products</a></li>
 								<li class="menu-item"><a class="menu-link" href="#">Story</a></li>
 								<li class="menu-item"><a class="menu-link" href="#">Manufacturing</a></li>
 								<li class="menu-item"><a class="menu-link" href="#">Packaging</a></li>
@@ -40,7 +40,7 @@
 						<button type="button" class="menu-mobile-toggle _icon-burger"></button>
 					</div>
 					<div class="header__actions header-action">
-						<a href="#" class="header-action__like _icon-like "><span class="like-counter">1</span></a>
+						<a href="#" class="header-action__like _icon-like"><span class="like-counter"></span></a>
 						<a href="#" class="header-action__cart _icon-cart"></a>
 						<a href="#" class="header-action__user _icon-user"></a>
 					</div>
@@ -78,38 +78,40 @@
 						</li>
 					</ul>
 				</section>
-				<section class="gallery">
-					<div class="gallery__wrapper">
-						<div class="gallery__item gallery__item--h1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-1.webp" type="image/webp"><img src="img/content/h-1.png" alt=""></picture></a></div>
-						<div class="gallery__item gallery__item--h2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-2.webp" type="image/webp"><img src="img/content/h-2.png" alt=""></picture></a></div>
-						<div class="gallery__item gallery__item--v1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-1.webp" type="image/webp"><img src="img/content/v-1.jpg" alt=""></picture></a><span class="go-like _icon-like"></span></div>
-						<div class="gallery__item gallery__item--v2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-2.webp" type="image/webp"><img src="img/content/v-2.jpg" alt=""></picture></a><span class="go-like _icon-like"></span></div>
-						<div class="gallery__item gallery__item--v3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-3.webp" type="image/webp"><img src="img/content/v-3.jpg" alt=""></picture></a><span class="go-like _icon-like"></span></div>
-						<div class="gallery__item gallery__item--v4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-4.webp" type="image/webp"><img src="img/content/v-4.jpg" alt=""></picture></a><span class="go-like _icon-like"></span></div>
-						<div class="gallery__item gallery__item--h3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-3.webp" type="image/webp"><img src="img/content/h-3.png" alt=""></picture></a></div>
-						<div class="gallery__item gallery__item--h4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-4.webp" type="image/webp"><img src="img/content/h-4.png" alt=""></picture></a></div>
-					</div>
+				<section data-showmore="items" class="gallery block">
+					<ul data-showmore-content="1" class="content__block">
+						<ul class="gallery__wrapper ">
+							<li class="gallery__item gallery__item--h1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-1.webp" type="image/webp"><img src="img/content/h-1.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--h2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-2.webp" type="image/webp"><img src="img/content/h-2.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--v1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-1.webp" type="image/webp"><img src="img/content/v-1.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span>
+							</li>
+							<li class="gallery__item gallery__item--v2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-2.webp" type="image/webp"><img src="img/content/v-2.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--v3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-3.webp" type="image/webp"><img src="img/content/v-3.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--v4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-4.webp" type="image/webp"><img src="img/content/v-4.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--h3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-3.webp" type="image/webp"><img src="img/content/h-3.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--h4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-4.webp" type="image/webp"><img src="img/content/h-4.png" alt="image of gallery"></picture></a></li>
+						</ul>
+						<ul class="gallery__wrapper ">
+							<li class="gallery__item gallery__item--h1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-1.webp" type="image/webp"><img src="img/content/h-1.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--h2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-2.webp" type="image/webp"><img src="img/content/h-2.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--v1"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-1.webp" type="image/webp"><img src="img/content/v-1.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span>
+							</li>
+							<li class="gallery__item gallery__item--v2"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-2.webp" type="image/webp"><img src="img/content/v-2.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--v3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-3.webp" type="image/webp"><img src="img/content/v-3.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--v4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/v-4.webp" type="image/webp"><img src="img/content/v-4.jpg" alt="image of gallery"></picture></a><span class="go-like _icon-like"></span></li>
+							<li class="gallery__item gallery__item--h3"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-3.webp" type="image/webp"><img src="img/content/h-3.png" alt="image of gallery"></picture></a></li>
+							<li class="gallery__item gallery__item--h4"><a class="gallery__link" href="javascript:void(0)"><picture><source srcset="img/content/h-4.webp" type="image/webp"><img src="img/content/h-4.png" alt="image of gallery"></picture></a></li>
+						</ul>
+					</ul>
+					<button type="button" hidden data-showmore-button class="block__more">
+						<span class="button-more__add">Show more products</span>
+						<span class="button-more__remove">Hide products</span>
+					</button>
 				</section>
 			</div>
 		</main>
-		<footer class="footer">
-			<div class="footer__container">
-			</div>
-		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
-</div>
- -->
-
-	<script src="js/app.min.js?_v=20220502171403"></script>
+	<script src="js/app.min.js?_v=20220502210121"></script>
 </body>
 
 </html>
