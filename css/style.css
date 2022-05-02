@@ -433,6 +433,8 @@ input {
   width: 100%;
   padding: 5px;
   border-radius: 12px;
+  outline: none;
+  border: none;
 }
 
 .search-box__input:focus-visible {
@@ -975,6 +977,12 @@ input {
 }
 }
 
+@media (min-width: 950px) {
+  .search-box__input {
+    border: 2px solid #F4DE4D;
+  }
+}
+
 @media (max-width: 950px) {
   .header__container {
     -ms-flex-wrap: wrap;
@@ -999,10 +1007,6 @@ input {
             order: 1;
     width: 100%;
     padding-top: 20px;
-  }
-
-  .search-box__input {
-    border: 2px solid #F4DE4D;
   }
 }
 
