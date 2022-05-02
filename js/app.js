@@ -49,11 +49,15 @@
         }
     };
     const menu = document.querySelector(".menu");
-    menu.querySelector(".menu-list");
+    const menuList = menu.querySelector(".menu-list");
     menu.querySelector(".menu-mobile-arrow");
     const menuClosed = menu.querySelector(".menu-mobile-close");
     const menuToggle = document.querySelector(".menu-mobile-toggle");
     const menuOverlay = document.querySelector(".overlay");
+    menuList.addEventListener("click", (e => {
+        if (!menu.classList.contains("active")) return;
+        if (e.target.closest(".menu-item") || e.target.closest(".sidebar__item")) toggleMenu();
+    }));
     menuToggle.addEventListener("click", (() => {
         toggleMenu();
     }));

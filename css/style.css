@@ -228,20 +228,13 @@ h6 {
   display: none;
 }
 
-a:focus-visible,
-.button:focus-visible {
-  -webkit-transition: 0s;
-  -o-transition: 0s;
-  transition: 0s;
-  outline: 3px solid #036fc6;
-  outline-offset: 2px;
-}
-
 *:active,
 *:hover,
-*:focus {
+*:focus,
+*:focus-visible {
   outline: 0;
   outline-offset: 0;
+  border: none;
 }
 
 .header {
@@ -603,37 +596,27 @@ a:focus-visible,
   margin: 0px 0px 27px 0px;
 }
 
-.sidebar__link {
-  font-family: "SofiaPro", sans-serif;
-  line-height: 1.4117647059;
-  font-weight: 500;
-  padding-left: 12px;
-  -webkit-transition: all 0.1s ease 0s;
-  -o-transition: all 0.1s ease 0s;
-  transition: all 0.1s ease 0s;
-}
-
-.sidebar__link--help {
+.sidebar__item--help {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 50px;
+  padding-left: 27px;
 }
 
 @supports (margin-top: clamp( 0.0000000625rem , -5.9130433984rem  +  29.5652173043vw , 21.25rem )) {
-  .sidebar__link--help {
+  .sidebar__item--help {
     margin-top: clamp( 0.0000000625rem , -5.9130433984rem  +  29.5652173043vw , 21.25rem );
   }
 }
 
 @supports not (margin-top: clamp( 0.0000000625rem , -5.9130433984rem  +  29.5652173043vw , 21.25rem )) {
-  .sidebar__link--help {
+  .sidebar__item--help {
     margin-top: calc(0.0000000625rem + 21.2499999375 * (100vw - 20rem) / 71.875);
   }
 }
 
-.sidebar__link--help::before {
+.sidebar__item--help::before {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -651,6 +634,16 @@ a:focus-visible,
   height: 40px;
   background: #F6F6F6;
   border-radius: 50%;
+}
+
+.sidebar__link {
+  font-family: "SofiaPro", sans-serif;
+  line-height: 1.4117647059;
+  font-weight: 500;
+  padding-left: 12px;
+  -webkit-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 
 .gallery {
@@ -845,7 +838,7 @@ a:focus-visible,
     bottom: -3px;
     right: 0;
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: #000;
     -webkit-transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     -o-transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
@@ -983,6 +976,10 @@ a:focus-visible,
     padding-top: 30px;
   }
 
+  .sidebar__item:last-child {
+    margin-left: 15px;
+  }
+
   .sidebar__link {
     width: 400px;
   }
@@ -1002,15 +999,11 @@ a:focus-visible,
     margin: 0px 0px 15px 0px;
   }
 
-  .sidebar__link--help {
+  .sidebar__item--help {
     margin-top: 0;
   }
 
-  .sidebar__link--help {
-    padding-left: 40px;
-  }
-
-  .sidebar__link--help::before {
+  .sidebar__item--help::before {
     background: transparent;
     left: -5px;
   }
