@@ -168,28 +168,6 @@ h6 {
       touch-action: none;
 }
 
-.wrapper {
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-}
-
-.wrapper > main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.wrapper > * {
-  min-width: 0;
-}
-
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -615,6 +593,11 @@ input {
   }
 }
 
+body,
+html {
+  min-height: 100vh;
+}
+
 .page {
   padding-top: 57px;
 }
@@ -640,6 +623,13 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__item img {
+  max-width: 100%;
 }
 
 .sidebar__item:not(:last-child) {
@@ -690,18 +680,16 @@ input {
   font-family: "SofiaPro", sans-serif;
   line-height: 1.4117647059;
   font-weight: 500;
-  padding-left: 12px;
   -webkit-transition: all 0.1s ease 0s;
   -o-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
+  padding: 0px 0px 0px 12px;
 }
 
 .gallery {
   position: relative;
-  padding-bottom: 80px;
   padding-left: 235px;
   top: 70px;
-  height: 100%;
 }
 
 .gallery__wrapper {
@@ -804,6 +792,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 1px;
   background: #FFFFFF;
   border-radius: 50%;
   cursor: pointer;
@@ -833,44 +822,44 @@ input {
   }
 }
 
-@supports (font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.7119047619rem  +  0.1904761905vw , 0.875rem )) {
   .go-like {
-    font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem );
+    font-size: clamp( 0.75rem , 0.7119047619rem  +  0.1904761905vw , 0.875rem );
   }
 }
 
-@supports not (font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.7119047619rem  +  0.1904761905vw , 0.875rem )) {
   .go-like {
-    font-size: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 65.625);
+    font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 65.625);
   }
 }
 
-@supports (top: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem )) {
+@supports (top: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem )) {
   .go-like {
-    top: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem );
+    top: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem );
   }
 }
 
-@supports not (top: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem )) {
+@supports not (top: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem )) {
   .go-like {
-    top: calc(0.3125rem + 0.9375 * (100vw - 20rem) / 65.625);
+    top: calc(0.5rem + 0.75 * (100vw - 20rem) / 65.625);
   }
 }
 
-@supports (right: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem )) {
+@supports (right: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem )) {
   .go-like {
-    right: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem );
+    right: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem );
   }
 }
 
-@supports not (right: clamp( 0.3125rem , 0.0267857143rem  +  1.4285714286vw , 1.25rem )) {
+@supports not (right: clamp( 0.5rem , 0.2714285714rem  +  1.1428571429vw , 1.25rem )) {
   .go-like {
-    right: calc(0.3125rem + 0.9375 * (100vw - 20rem) / 65.625);
+    right: calc(0.5rem + 0.75 * (100vw - 20rem) / 65.625);
   }
 }
 
 .like-active {
-  color: red;
+  background-color: red;
 }
 
 @media (min-width: 47.99875em) {
@@ -910,46 +899,28 @@ input {
   }
 }
 
-@media (min-width: 85.625em) {
-  .page {
-    min-height: 100vh;
-  }
-}
-
 @media (min-width: 600px) {
-@supports (width: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem )) {
+@supports (width: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem )) {
     .go-like {
-      width: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem );
+      width: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem );
     }
 }
 
-@supports not (width: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem )) {
+@supports not (width: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem )) {
     .go-like {
-      width: calc(1.5625rem + 0.9375 * (100vw - 20rem) / 65.625);
+      width: calc(1.5625rem + 0.8125 * (100vw - 20rem) / 65.625);
     }
 }
 
-@supports (height: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem )) {
+@supports (height: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem )) {
     .go-like {
-      height: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem );
+      height: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem );
     }
 }
 
-@supports not (height: clamp( 1.5625rem , 1.2767857143rem  +  1.4285714286vw , 2.5rem )) {
+@supports not (height: clamp( 1.5625rem , 1.3148809524rem  +  1.2380952381vw , 2.375rem )) {
     .go-like {
-      height: calc(1.5625rem + 0.9375 * (100vw - 20rem) / 65.625);
-    }
-}
-
-@supports (font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem )) {
-    .go-like {
-      font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.9375rem , 0.8422619048rem  +  0.4761904762vw , 1.25rem )) {
-    .go-like {
-      font-size: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 65.625);
+      height: calc(1.5625rem + 0.8125 * (100vw - 20rem) / 65.625);
     }
 }
 
@@ -976,12 +947,6 @@ input {
       right: calc(0.625rem + 0.625 * (100vw - 20rem) / 65.625);
     }
 }
-}
-
-@media (min-width: 950px) {
-  .search-box__input {
-    border: 2px solid #F4DE4D;
-  }
 }
 
 @media (max-width: 950px) {
@@ -1014,10 +979,6 @@ input {
 @media (max-width: 600px) {
   .sidebar {
     position: static;
-  }
-
-  .sidebar__list {
-    padding-bottom: 100px;
   }
 
   .sidebar__item {
@@ -1465,9 +1426,9 @@ input {
   }
 
   .go-like {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 
   .go-like:hover {

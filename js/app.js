@@ -116,7 +116,6 @@
     };
     const menu = document.querySelector(".menu");
     const menuList = menu.querySelector(".menu-list");
-    menu.querySelector(".menu-mobile-arrow");
     const menuClosed = menu.querySelector(".menu-mobile-close");
     const menuToggle = document.querySelector(".menu-mobile-toggle");
     const menuOverlay = document.querySelector(".overlay");
